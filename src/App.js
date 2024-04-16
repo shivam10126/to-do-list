@@ -32,7 +32,7 @@ const App = () => {
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>
-        <h1 className="text-center my-4 text-6xl font-bold">React To-Do App</h1>
+        <h1 className="text-center mt-3 xl:my-4 text-3xl xl:text-6xl font-bold">React To-Do App</h1>
         <TaskInput />
         <TaskList />
       </div>

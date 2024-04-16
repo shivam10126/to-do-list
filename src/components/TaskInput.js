@@ -22,14 +22,14 @@ const TaskInput = () => {
   };
 
   return (
-    <div className="mb-5 mt-16 ">
-        <div className="flex flex-row w-1/3 mx-auto gap-x-4 ">
+    <div className="mb-5 mt-7 xl:mt-16 ">
+        <div className="flex  flex-col md:w-[70%] md:flex-row px-3 xl:w-1/3 mx-auto gap-y-3 gap-x-4 ">
           <Input 
             placeholder="Enter task" 
             value={task} 
             onChange={handleInputChange}  
           />
-          <Button type="primary" htmlType="submit" onClick={handleSubmit}>
+          <Button type="primary" className='w-1/3 mx-auto' htmlType="submit" onClick={handleSubmit}>
             Add
           </Button>
         </div>

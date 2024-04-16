@@ -27,11 +27,11 @@ const TaskList = () => {
     <div className=''>
     {!tasks || tasks.length === 0 ? 
 
-    <p className=" mt-4 w-1/2 border mx-auto text-2xl min-h-[60vh] flex justify-center align-middle items-center  text-center animate-pulse">No tasks available</p>
+    <p className=" mt-4 w-[90%]  xl:w-1/2 border mx-auto text-2xl min-h-[60vh] flex justify-center align-middle items-center  text-center animate-pulse">No tasks available</p>
 
     :
 
-      <ul className=" mt-4 w-1/2 border mx-auto px-3 h-[60vh] overflow-y-scroll">
+      <ul className=" mt-4 xl:w-1/2 w-[90%] border mx-auto px-3 h-[60vh] overflow-y-scroll">
       {tasks.map((task, index) => (
         <li key={index} className={`z-auto py-2 px-3 ${completed[index] ? 'complete' : 'incomplete'}`}>
           <div className="mr-auto flex flex-row items-center">
