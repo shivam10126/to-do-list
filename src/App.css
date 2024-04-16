@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+.complete {
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  color: #5c5f61; /* Gray color for completed tasks */
+}
+.complete::before {
+  content: "";
+  position: absolute;
+  top:52%;
+  left: 5%;
+  width: 80%;
+  height: 5%;
+  background-color: #ff0000;
+  border: 1px solid rgb(255, 0, 0);
+  z-index: 10;
+  animation: slash 1s ;
+  animation-fill-mode: forwards;
+  transform-origin: left;
+}
+@keyframes slash {
+  0%{transform: scaleX(0);};
+  100%{transform: scaleX(80);}
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.incomplete {
+  color: #000000; /* Default color for incomplete tasks */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li{
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row; 
+  gap: 10px;
+  margin: 5px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(69, 138, 34) 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform:translateX(25%);
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(55, 171, 221); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(64, 195, 251); 
 }
